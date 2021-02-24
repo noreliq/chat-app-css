@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px; }
+
+main {
+  min-height: 100vh;
+  display: flex; }
+  @media (min-width: 861px) {
+    main {
+      align-items: center;
+      margin-left: 25vw;
+      padding: 100px 40px 100px 0px; } }
+  @media (max-width: 860px) {
+    main {
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 0px; } }
+
+.phone {
+  animation-name: phone;
+  animation-duration: 600ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  transform: translateX(-50vw);
+  flex-shrink: 0;
+  width: 300px;
+  height: 620px;
+  background: white;
+  border-radius: 26px;
+  user-select: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 25px 50px -12px, 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  padding: 10px; }
+
+@keyframes phone {
+  to {
+    transform: translateX(0); } }
+  @media (max-width: 860px) {
+    .phone {
+      transform: translateX(-100vw); } }
+  .phone__inner {
+    background: #f5f3f7;
+    height: 100%;
+    border-radius: 18px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; }
+  .phone__header {
+    flex-shrink: 0;
+    background: linear-gradient(to left, #e942ff, #8838ff);
+    border-radius: 0 0 5px 5px;
+    display: flex;
+    align-items: center;
+    padding: 35px 20px 15px 20px;
+    position: relative;
+    color: white; }
+    .phone__header::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 55%;
+      left: 50%;
+      top: 0;
+      height: 20px;
+      background: white;
+      transform: translateX(-50%);
+      border-radius: 0 0 15px 15px; }
+  .phone__avatar {
+    display: block;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin: 0px 10px; }
+  .phone__chat {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px;
+    overflow: hidden; }
+    .phone__chat p {
+      animation-name: msg;
+      animation-duration: 300ms;
+      animation-fill-mode: forwards;
+      opacity: 0;
+      transform: scale(0); }
+    .phone__chat p:nth-child(1) {
+      animation-delay: 200ms; }
+    .phone__chat p:nth-child(2) {
+      animation-delay: 300ms; }
+    .phone__chat p:nth-child(3) {
+      animation-delay: 400ms; }
+    .phone__chat p:nth-child(4) {
+      animation-delay: 500ms; }
+    .phone__chat p:nth-child(5) {
+      animation-delay: 600ms; }
+    .phone__chat p:nth-child(6) {
+      animation-delay: 700ms; }
+    .phone__chat p:nth-child(7) {
+      animation-delay: 800ms; }
+    .phone__chat p:nth-child(8) {
+      animation-delay: 900ms; }
+
+@keyframes msg {
+  to {
+    opacity: 1;
+    transform: scale(1); } }
+  .phone__msg {
+    font-size: 11px;
+    line-height: 16px;
+    padding: 7px 10px;
+    border-radius: 14px;
+    max-width: 68%;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03); }
+  .phone__msg--them {
+    border-bottom-left-radius: 5px;
+    color: #9241c8;
+    background: rgba(216, 158, 255, 0.2);
+    transform-origin: bottom left; }
+  .phone__msg--you {
+    align-self: flex-end;
+    color: #6e5d7e;
+    background: white;
+    border-bottom-right-radius: 5px;
+    transform-origin: bottom right; }
+  .phone__msg--you + .phone__msg--them {
+    margin-top: 22px; }
+  .phone__pics {
+    align-self: flex-end;
+    display: flex;
+    margin-top: 22px;
+    transform-origin: bottom right; }
+    .phone__pics img {
+      display: block;
+      border-radius: 14px;
+      width: 52px;
+      height: 52px; }
+    .phone__pics img + img {
+      margin-left: 12px; }
+  .phone__price {
+    display: flex;
+    align-items: center;
+    transform-origin: bottom left;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 9px;
+    max-width: 75%;
+    border-radius: 12px;
+    border-bottom-left-radius: 5px;
+    background: linear-gradient(to right, #e942ff, #8838ff);
+    padding: 9px;
+    padding-left: 30px;
+    position: relative; }
+    .phone__price span {
+      display: block;
+      margin-left: auto;
+      margin-right: 10px;
+      font-size: 14px;
+      color: white;
+      font-weight: 500; }
+    .phone__price::after {
+      content: "";
+      display: block;
+      position: absolute;
+      border-radius: 100%;
+      left: 9px;
+      width: 14px;
+      height: 14px;
+      border: 2px solid #e570ff; }
+  .phone__footer {
+    flex-shrink: 0;
+    padding: 10px; }
+  .phone__input {
+    background: white;
+    border-radius: 100px;
+    color: #c6cacd;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    padding: 5px 5px 5px 20px; }
+  .phone__send {
+    background: #3e2753;
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .phone__send img {
+      width: 7px;
+      margin-left: 2px; }
+  .phone__name {
+    font-size: 13px; }
+  .phone__status {
+    margin-top: 2px;
+    font-size: 10px;
+    color: #d89eff; }
+  .phone__menu {
+    margin-left: auto;
+    transform: rotate(90deg) scale(0.5) translateY(-20px); }
+  .phone__back {
+    transform: rotate(180deg); }
+
+.info {
+  margin-left: 10vw;
+  max-width: 430px;
+  animation-name: info;
+  animation-duration: 400ms;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  opacity: 0;
+  transform: translateY(40px); }
+  .info h2 {
+    font-size: 40px;
+    font-weight: 500;
+    color: #3e2753;
+    margin-bottom: 25px; }
+  .info p {
+    color: #a39daa;
+    line-height: 28px; }
+
+@keyframes info {
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
+  @media (max-width: 860px) {
+    .info {
+      margin-left: 0;
+      margin-top: 50px;
+      padding: 0px 30px;
+      text-align: center; }
+      .info h2 {
+        font-size: 32px;
+        margin-bottom: 20px; }
+      .info p {
+        font-size: 14px;
+        line-height: 24px; } }
+
+.purple-blob {
+  width: 40vw;
+  height: 85vh;
+  background: linear-gradient(to bottom, #e942ff, #8838ff);
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  border-radius: 0 0 40vw 40vw;
+  animation-name: blob;
+  animation-duration: 400ms;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  transform: translateX(-10vw) translateY(-100%); }
+
+@keyframes blob {
+  to {
+    transform: translateX(-10vw) translateY(0); } }
+  @media (max-width: 860px) {
+    .purple-blob {
+      width: 100vw;
+      height: 65vh;
+      border-radius: 0 0 100vw 100vw;
+      transform: translateX(-50vw) translateY(-100%); }
+    @keyframes blob {
+      to {
+        transform: translateX(-50vw) translateY(0); } } }

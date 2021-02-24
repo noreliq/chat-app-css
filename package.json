@@ -1,0 +1,15 @@
+{
+  "name": "chat-app-css",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "css": "node-sass src/scss/index.scss -o public",
+    "css:watch": "npm run css && node-sass src/scss/index.scss -wo public"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
